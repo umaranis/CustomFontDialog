@@ -1,4 +1,4 @@
-﻿namespace CustomFontDialog
+﻿namespace TestProject
 {
     partial class Form1
     {

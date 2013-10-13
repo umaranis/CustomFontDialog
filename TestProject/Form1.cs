@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomFontDialog
+namespace TestProject
 {
     public partial class Form1 : Form
     {
-        FontDialog f;
+        CustomFontDialog.FontDialog f;
 
         public Form1()
         {
             InitializeComponent();
-
-            f = new FontDialog();
+            
+            f = new CustomFontDialog.FontDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
