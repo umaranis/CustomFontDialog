@@ -63,9 +63,6 @@
     <Compile Include="FontList.Designer.cs">
       <DependentUpon>FontList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FontListBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecentlyUsedList.cs" />
     <EmbeddedResource Include="FontDialog.resx">
