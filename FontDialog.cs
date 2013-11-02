@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomFontDialog
@@ -91,7 +89,7 @@ namespace CustomFontDialog
                     break;
                 case Keys.Decimal:
                 case (Keys)190: //decimal point
-                    if (txtSize.Text.Contains('.'))
+                    if (txtSize.Text.Contains("."))
                     {
                         e.SuppressKeyPress = true;
                         e.Handled = true;
