@@ -5,7 +5,7 @@ using System.Text;
 namespace CustomFontDialog
 {
     /// <summary>
-    /// A custom collection for maintenaning recently used lists of any kind. For example, recently used fonts, color etc.
+    /// A custom collection for maintaining recently used lists of any kind. For example, recently used fonts, color etc.
     /// List with limited size which is given by MaxSize. As list grows beyond MaxSize, oldest item is removed.
     /// New items are added at the top of the list (at index 0), existing items move down.
     /// If added item is already there in the list, it is moved to the top (at index 0).
