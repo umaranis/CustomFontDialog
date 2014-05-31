@@ -225,6 +225,51 @@ namespace CustomFontDialog
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, uint wParam, uint lParam);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lstFont_KeyDown(object sender, KeyEventArgs e)
+        {
+            // if you type alphanumeric characters while focus is on ListBox, it shifts the focus to TextBox.
+            if (Char.IsLetterOrDigit((char)e.KeyValue))
+            {
+                txtFont.Focus();
+                txtFont.Text = ((char)e.KeyValue).ToString();
+                txtFont.SelectionStart = 1;
+            }
+
+
+            // allows to move between sections using arrow keys
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                case Keys.Up:
+                    if (lstFont.SelectedIndex == AllFontsSectionIndex + 1)
+                    {
+                        lstFont.SelectedIndex = lstFont.SelectedIndex - 2;
+                        e.SuppressKeyPress = true;
+                    }
+                    break;
+                case Keys.Down:
+                case Keys.Right:
+                    if (lstFont.SelectedIndex == AllFontsSectionIndex - 1)
+                    {
+                        lstFont.SelectedIndex = lstFont.SelectedIndex + 2;
+                        e.SuppressKeyPress = true;
+                    }
+                    break;
+
+            }
+        }
+
+        // ensures that focus is lstFont control whenever the form is loaded
+        private void FontList_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = lstFont;
+        }
+               
                        
     }
 }

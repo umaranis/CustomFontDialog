@@ -46,6 +46,7 @@
             this.lstFont.TabIndex = 0;
             this.lstFont.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstFont_DrawItem);
             this.lstFont.SelectedIndexChanged += new System.EventHandler(this.lstFont_SelectedIndexChanged);
+            this.lstFont.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstFont_KeyDown);
             // 
             // txtFont
             // 
@@ -66,6 +67,7 @@
             this.Controls.Add(this.lstFont);
             this.Name = "FontList";
             this.Size = new System.Drawing.Size(220, 307);
+            this.Load += new System.EventHandler(this.FontList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
