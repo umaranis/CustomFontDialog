@@ -99,7 +99,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomFontDialog\CustomFontDialog.csproj">
+    <ProjectReference Include="..\CustomFontDialog.csproj">
       <Project>{d1ee5a8a-a366-4db4-b6e0-42ee09c97f1a}</Project>
       <Name>CustomFontDialog</Name>
     </ProjectReference>
