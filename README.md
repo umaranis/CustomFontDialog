@@ -6,12 +6,14 @@ CustomFontDialog avoids 'This is not a True Type Font' exception that affects th
 
 Moreover, CustomFontDialog incorporates few additional features like easy access to recently used fonts.
 
+####Download
+Binary and source files can be downloaded as a zip file from [here](https://sourceforge.net/projects/customfontdialog/files/latest/download).
+
 ####Usage
 
 Following C# code snippet demonstrates how to instantiate and display Custom FontDialog.
 
-~~~~~~~~~~~~~~~
-:::csharp
+```csharp
  CustomFontDialog.FontDialog fontDialog = new CustomFontDialog.FontDialog();
  fontDialog.Font = new Font(FontFamily.GenericSansSerif, 10); // sets the default font
 
@@ -23,7 +25,8 @@ Following C# code snippet demonstrates how to instantiate and display Custom Fon
  {
     // FontDialog is canceled by the user, your code here to handle cancel action
  }
-~~~~~~~~~~~~~~
+ ```
+
 
 <br>
 
@@ -37,9 +40,9 @@ As compared to the standard FontDialog, CustomFontDialog doesn't support changin
 ####Updates
 
 ######Version 0.2.0
-1- In Font List, arrow keys can be used to move between 'Recently Used' and 'All Fonts' sections.
-2- When user starts typing in Font List, the focus shifts to the filter Text box automatically.
-3- Whenever CustomFontDialog is displayed, the focus is on Font List by default.
+1. In Font List, arrow keys can be used to move between 'Recently Used' and 'All Fonts' sections.
+2. When user starts typing in Font List, the focus shifts to the filter Text box automatically.
+3. Whenever CustomFontDialog is displayed, the focus is on Font List by default.
 
 ####Screen Shot
-[[project_screenshots]]
+![Image of CustomFontDialog](https://a.fsdn.com/con/app/proj/customfontdialog/screenshots/CustomFontDialog.png)
