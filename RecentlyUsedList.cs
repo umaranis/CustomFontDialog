@@ -11,7 +11,7 @@ namespace CustomFontDialog
     /// If added item is already there in the list, it is moved to the top (at index 0).
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class RecentlyUsedList<T>
+    public class RecentlyUsedList<T> : IEnumerable<T>
     {
         /// <summary>
         /// 
@@ -59,6 +59,30 @@ namespace CustomFontDialog
 
             list.Insert(0, item);
         }
-    
+
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return list.GetEnumerator();
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
+        /// <summary>
+        /// Reverses the list. First item becomes last, for instance.
+        /// </summary>
+        public void Reverse()
+        {
+            T temp;
+            for(int i = 0; i < list.Count / 2; i++)
+            {
+                temp = list[i];
+                list[i] = list[list.Count - i - 1];
+                list[list.Count - i - 1] = temp;
+            }
+        }
     }
 }
